@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Sign On</title>
+    <!-- Tambahkan link ke file CSS TailwindCSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-200">
+    <!-- Tambahkan class background warna abu-abu -->
+    <!-- Header -->
+    <nav
+      class="bg-gray-400 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img
+            src="img\pinguin-removebg-preview.png"
+            class="h-8 mr-3"
+            alt="Flowbite Logo"
+          />
+        </a>
+        <div class="flex md:order-2">
+          <button
+            type="button"
+            class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            LOG IN
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-400 rounded-lg bg-gray-400 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-gray-400 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 bg-black rounded md:bg-transparent md:text-black md:p-0 md:dark:text-blue-500"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="flex justify-center items-center min-h-screen flex-col">
+        <!-- Menggunakan flex-column untuk mengatur tata letak vertikal -->
+        <a class="text-black text-xl font-semibold mb-4 block"
+          >Single Sign On</a
+        >
+        <!-- Teks "Single Sign On" di atas kotak login -->
+        <div class="bg-gray-100 p-8 rounded-lg shadow-md w-full max-w-md">
+          <!-- Judul -->
+          <h1
+            class="text-lg font-semibold mb-4 text-center text-gray-900 py-2 rounded-lg"
+          >
+            Enter your UGM ID and Password
+          </h1>
+
+          <!-- Form -->
+          <form>
+            <div class="mb-4">
+              <label for="ugm_id" class="block text-gray-700 font-medium"
+                >UGM ID (without@*.ugm.ac.id)</label
+              >
+              <input
+                type="text"
+                id="ugm_id"
+                name="ugm_id"
+                class="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring focus:border-blue-500"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label for="password" class="block text-gray-700 font-medium"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring focus:border-blue-500"
+              />
+            </div>
+
+            <div class="mb-2 flex items-center">
+              <input type="checkbox" id="warn_me" name="warn_me" class="mr-2" />
+              <label for="warn_me" class="text-gray-700 text-sm"
+                >Warn me before logging me into other sites</label
+              >
+            </div>
+
+            <div class="mb-4 flex items-center">
+              <input
+                type="checkbox"
+                id="remember_me"
+                name="remember_me"
+                class="mr-2"
+              />
+              <label for="remember_me" class="text-gray-700 text-sm"
+                >Remember Me</label
+              >
+            </div>
+
+            <div class="flex flex-row justify-between">
+              <div class="flex">
+                <button
+                  type="submit"
+                  class="flex text-sm bg-green-600 hover:bg-black text-white min-w-[4rem] px-2 py-1 focus:outline-none focus:ring focus:bg-blue-600"
+                  style="margin-right: 12px"
+                >
+                  Login
+                </button>
+
+                <button
+                  type="button"
+                  class="flex bg-yellow-500 hover:bg-black text-white min-w-[4rem] px-2 py-1 focus:outline-none focus:ring focus:bg-gray-400 justify-self-start"
+                >
+                  Clear
+                </button>
+              </div>
+
+              <!-- Kata "Forgot Pass word" sejajar dengan tombol -->
+              <div class="self-start justify-self-end block">
+                <a href="#" class="text-blue-500 text-xs hover:underline"
+                  >Forgot Password</a
+                >
+              </div>
+            </div>
+          </form>
+
+          <!-- Do not have an account -->
+          <div class="mt-4 text-center">
+            <p class="text-sm">Do not have an accounttt?</p>
+          </div>
+
+          <!-- Create an Account -->
+          <div class="mt-4 text-center">
+            <button
+              type="button"
+              class="text-black hover:underline bg-transparent border border-gray-600 hover:bg-gray-200 text-sm px-4 py-2 rounded-md transition duration-300 w-full focus:outline-none focus:ring focus:bg-blue-500"
+            >
+              Create an Account
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-16 py-8 text-sm bg-slate-400 lg:px-32 lg:text-base">
+      <div>
+        <img src="./img/logo-ugm.png" alt="" class="h-12 w-18" />
+        <p class="my-2">
+          Gedung Iso Reksohadiprodjo, Sekip Unit 1, Caturtunggal
+        </p>
+        <p class="my-2">Depok, Sleman, Yogyakarta 55281</p>
+        <p class="my-2">Email: trpl.sv@ugm.ac.id</p>
+        <p class="my-2">Telp: 0274-541020</p>
+        <hr class="border-slate-800" />
+        <div
+          class="block font-semibold md:flex md:flex-wrap md:justify-center md:items-center"
+        >
+          <div>
+            <h1 class="text-2xl my-2">Logo</h1>
+          </div>
+          <div class="mx-auto md:flex">
+            <p class="my-2 md:mx-4"><a href="">Home</a></p>
+            <p class="my-2 md:mx-4"><a href="">About Us</a></p>
+            <p class="my-2 md:mx-4"><a href="">FAQs</a></p>
+            <p class="my-2 md:mx-4"><a href="">Research</a></p>
+            <p class="my-2 md:mx-4"><a href="">Appearance</a></p>
+            <p class="my-2 md:mx-4"><a href="">Membership</a></p>
+          </div>
+          <div class="flex">
+            <a href="">
+              <svg
+                class="h-8 w-8"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
+                ></path>
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                class="ml-2 h-8 w-8"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M 12 4 C 12 4 5.7455469 3.9999687 4.1855469 4.4179688 C 3.3245469 4.6479688 2.6479687 5.3255469 2.4179688 6.1855469 C 1.9999687 7.7455469 2 12 2 12 C 2 12 1.9999687 16.254453 2.4179688 17.814453 C 2.6479687 18.675453 3.3255469 19.352031 4.1855469 19.582031 C 5.7455469 20.000031 12 20 12 20 C 12 20 18.254453 20.000031 19.814453 19.582031 C 20.674453 19.352031 21.352031 18.674453 21.582031 17.814453 C 22.000031 16.254453 22 12 22 12 C 22 12 22.000031 7.7455469 21.582031 6.1855469 C 21.352031 5.3255469 20.674453 4.6479688 19.814453 4.4179688 C 18.254453 3.9999687 12 4 12 4 z M 12 6 C 14.882 6 18.490875 6.1336094 19.296875 6.3496094 C 19.465875 6.3946094 19.604391 6.533125 19.650391 6.703125 C 19.891391 7.601125 20 10.342 20 12 C 20 13.658 19.891391 16.397875 19.650391 17.296875 C 19.605391 17.465875 19.466875 17.604391 19.296875 17.650391 C 18.491875 17.866391 14.882 18 12 18 C 9.119 18 5.510125 17.866391 4.703125 17.650391 C 4.534125 17.605391 4.3956094 17.466875 4.3496094 17.296875 C 4.1086094 16.398875 4 13.658 4 12 C 4 10.342 4.1086094 7.6011719 4.3496094 6.7011719 C 4.3946094 6.5331719 4.533125 6.3946094 4.703125 6.3496094 C 5.508125 6.1336094 9.118 6 12 6 z M 10 8.5351562 L 10 15.464844 L 16 12 L 10 8.5351562 z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8">
+        <p class="text-center">
+          © 2023 Software Engineering. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>
